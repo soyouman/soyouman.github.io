@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../../chatbot/img/back.jpg");
+	background-size:  cover;
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto, arial, sans-serif;
+  display: flex;
+}
+
+/* style the container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgba(242, 242, 242, 0.9);
+  padding: 0;
+  margin: auto;
+  margin-top: 10%;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:block;
+    color: #000;
+    position: relative;
+}
+
+#message p {
+    font-size: 18px;
+    padding-left: 20%;
+}
+
+#message h3{
+  padding-left: 0%;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+.col-login{
+  float: left;
+  width: 100%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Set a style for all buttons */
+
+.button_form {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button_form:hover {
+    opacity: 0.8;
+}
+
+.button_login {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.button_login:hover {
+    opacity: 0.8;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.forgotten-pwd{
+  text-align: center;
+}
+
+.forgotten-pwd a{
+  color: #0586ef;
+}
+
+@media only screen and (max-device-width: 425px) {
+	body{
+		background-size: 300%;
+		display: block;
+	}
+	header img {
+		margin: 20px auto;
+		display: block;
+	}
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+	.logo-header>a>img {
+		max-width: 50%;
+	}
+}
+
+@media only screen and (min-device-width: 426px) and (max-device-width: 1200px) {
+	body{
+		background-size: 300%;
+		display: block;
+	}
+	header img {
+		margin: 20px auto;
+		display: block;
+	}
+
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) {
+	header {
+		width: 100%;
+		position: absolute;
+		top: 2%;
+	}
+	.logo-header {
+		max-width: 35%;
+		position: absolute;
+		text-align: center;
+	}
+	.logo-header>a>img {
+		max-width: 50%;
+	}
+}
